@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{changepage}
+\usepackage{lipsum}
+\usepackage{scrextend} % for block indents (for example)
+\usepackage{color, colortbl} % For Coloring Table Elements
+\usepackage{listings}
+\usepackage{makecell}  % allows more complex table formatting
+\usepackage{multirow}
+\usepackage{proof}     % for inference trees
+\usepackage{subcaption}
+\usepackage{enumitem}  % allows customization of enumerate
+
+\usepackage{wrapfig}   % allows wrapping text around figures
+\usepackage{sidecap}   % allows side captions on figures
+\sidecaptionvpos{figure}{t}
+\usepackage{physics}   % provides abs{} and norm{}
+
+% for the makecell package:
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\addtolength{\hoffset}{-1cm}
+\addtolength{\textwidth}{1cm}
+\graphicspath{ {IMAGES/} }
+
+\definecolor{Gray}{gray}{0.9}
+\newcolumntype{g}{>{\columncolor{Gray}}c}
+
+% for bibliography and citations
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+\title{Set Theory Operation Identities}
+\author{\textit{from Rosen's (7e) Table 2.1 (pg 130)}}
+\date{}
+
+\begin{document}
+\maketitle
+%\tableofcontents
+
+\flushleft
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline
+    &\\[-5pt]
+    \textbf{\textit{Identity}}
+        & \textbf{\textit{Name}}\\
+    &\\[-5pt]
+    \hline \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cap U = A$\\$A \cup \emptyset = A$}
+        & \parbox[t]{5cm}{Identity Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup U = U$\\$A \cap \emptyset = \emptyset$}
+        & \parbox[t]{5cm}{Domination Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup A = A$\\$A \cap A = A$}
+        & \parbox[t]{5cm}{Idempotent Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$\overline{\left(\overline{A}\right)}= A$}
+        & \parbox[t]{5cm}{Complementation Law}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup B = B \cup A$\\$A \cap B = B \cap A$}
+        & \parbox[t]{5cm}{Commutative Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup (B \cup C) = (A \cup B) \cup C$\\$A\cap (B \cap C) = (A \cap B) \cap C$}
+        & \parbox[t]{5cm}{Associative Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup (B \cap C) = (A \cup B) \cap (A \cup C)$\\$A\cap (B \cup C) = (A \cap B) \cup (A \cap C)$}
+        & \parbox[t]{5cm}{Distributive Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$\overline{A\cap B} = \overline{A}\cup\overline{B}$\\$\overline{A\cup B} = \overline{A}\cap\overline{B}$}
+        & \parbox[t]{5cm}{De Morgan's Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup (A\cap B) = A$\\$A \cap (A \cup B) = A$}
+        & \parbox[t]{5cm}{Absorption Laws}\\
+    &\\[-5pt]
+    \hline
+    &\\[-5pt]
+    \parbox[t]{5cm}{$A\cup \overline{A} = U$\\$A \cap \overline{A} = \emptyset$}
+        & \parbox[t]{5cm}{Complement Laws}\\
+    &\\[-5pt]
+    \hline \hline
+\end{tabular}
+\end{center}
+
+
+
+% ========== %
+% END MATTER %
+% ========== %
+% \newpage
+\printbibliography
+
+\end{document}
